@@ -1,0 +1,25 @@
+{
+  "name": "microservices",
+  "version": "1.0.0",
+  "description": "mini curso microservices",
+  "main": "server.js",
+  "author": "Alexandre E Souza",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon   server.js ",
+    "service": "nodemon ./services/UserService.js",
+    "monitor": "nodemon ./services/MonitorService.js",
+    "json:up": "json-server --watch db.json"
+  },
+  "dependencies": {
+    "@cloudnative/health-connect": "^2.1.0",
+    "@polka/parse": "^1.0.0-next.0",
+    "axios": "^0.20.0",
+    "cote": "^1.0.0",
+    "polka": "^0.5.2"
+  },
+  "devDependencies": {
+    "json-server": "^0.16.2",
+    "nodemon": "^2.0.5"
+  }
+}
